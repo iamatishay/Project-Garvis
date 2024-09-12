@@ -63,7 +63,7 @@ if 'logged_in' in st.session_state and st.session_state['logged_in']:
         unsafe_allow_html=True
     )
 
-    engine = create_engine('postgresql+psycopg2://trai@bccms:B5*m6$p5aS427Ed@bccms.postgres.database.azure.com:5432/dcr')
+    engine = create_engine('postgresql+psycopg2:/****************************************************r')
 
     conn = None
     
