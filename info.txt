@@ -1,0 +1,36 @@
+Why Use gatherUsageStats = false?
+--Privacy Concerns: Some users may have concerns about privacy and data collection. Setting this option to false ensures that no usage data is sent to Streamlit's servers.
+--Avoiding Telemetry: If you prefer not to participate in telemetry or usage tracking, this setting allows you to opt out.
+--Compliance: In certain environments or organizations, there may be policies that restrict data collection or telemetry, making this setting useful for compliance.
+
+
+__config.toml is a configuration file used by Streamlit to manage application settings.
+It's written in TOML (Tom's Obvious, Minimal Language) format, which is a simple configuration file format.
+
+
+
+the *****headless setting is used to specify whether the Streamlit server should run in headless mode or not. Here's a detailed explanation:
+
+headless Setting
+Definition
+toml
+Copy code
+[server]
+headless = true
+Purpose
+Headless Mode: When headless is set to true, Streamlit runs in a mode that does not require a browser to be open on the local machine where the server is running. This is typically used when running Streamlit apps on a remote server or in environments where you don't have a graphical user interface (GUI).
+Non-Headless Mode: If headless is set to false or is omitted, Streamlit will open a browser window or tab automatically when the app starts. This mode is more suitable for local development on a machine with a GUI.
+Use Cases
+Remote Deployment:
+
+When deploying a Streamlit app to a server or cloud environment where there is no GUI, you use headless = true to ensure that the app can run without attempting to open a browser window.
+Automated Testing:
+
+In automated testing environments or CI/CD pipelines where no GUI is present, running Streamlit in headless mode is often necessary.
+Local Development:
+
+For local development on a machine with a GUI, you might choose to leave headless set to false (or not set) so that the browser opens automatically and provides a more interactive experience.
+
+
+
+
